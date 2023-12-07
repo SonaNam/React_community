@@ -21,6 +21,15 @@ export const ImageItem = styled(WriteItem)`
   max-width: calc(25% * 4);
   margin: 2vw;
   gap: 2.3vw;
+  .MainItem {
+  }
+
+  .subcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1vw;
+  }
 `;
 export const ViewDetailsLink = styled(Link)`
   flex: 0 0 25%;
@@ -38,5 +47,5 @@ export const ContentTitle = styled.h3`
   width: 10vw;
   max-width: 100%;
   margin: 0.3vw;
-  font-size: 1vw;
+  font-size: 1.5vw;
 `;

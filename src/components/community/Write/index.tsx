@@ -76,6 +76,7 @@ const Write = () => {
   const [selectedLocation, setSelectedLocation] = useState<LatLng | null>(null);
   const [address, setAddress] = useState("");
   const [searchedLocation, setSearchedLocation] = useState(null);
+  const [isEditing, setIsEditing] = useState(false);
   const [mapCenter, setMapCenter] = useState({
     lat: 33.450701,
     lng: 126.570667,
@@ -160,6 +161,9 @@ const Write = () => {
   const handleDragOver = (e) => {
     e.preventDefault();
   };
+  const toggleEdit = () => {
+    setIsEditing(!isEditing);
+  };
   const handleDrop = (e) => {
     e.preventDefault();
     const files = e.dataTransfer.files;
@@ -178,6 +182,7 @@ const Write = () => {
     const files = e.target.files;
     createFilePreviews(files);
   };
+  const EditComponent = ({ postToEdit }) => {};
 
   return (
     <>
